@@ -8,13 +8,14 @@ terraform {
 }
 
 provider "google" {
-  project = "striking-audio-412822"
-  region  = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project_id
+  region      = var.region
 }
 
 resource "google_storage_bucket" "dezc24-bucket" {
-  name          = "dezc24-bucket-412822"
-  location      = "US"
+  name          = var.gcs_bucket_id
+  location      = var.location
   force_destroy = true
 
   lifecycle_rule {
@@ -25,4 +26,9 @@ resource "google_storage_bucket" "dezc24-bucket" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+resource "google_bigquery_dataset" "dezc24_dataset" {
+  dataset_id = var.bq_dataset_id
+  location   = var.location
 }
