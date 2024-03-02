@@ -1,3 +1,3 @@
-# Module 5: Batch Processing
+# Module 5: Batch Processing (with Spark)
 
 ## Homework
