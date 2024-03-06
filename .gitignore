@@ -1,2 +1,5 @@
 # Ignore all ny_taxi_postgres_data directories
 ny_taxi_postgres_data/
+
+# Ignore all secrets directories
+secrets/
