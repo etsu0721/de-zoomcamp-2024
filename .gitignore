@@ -1,5 +1,8 @@
 # Ignore all ny_taxi_postgres_data directories
 ny_taxi_postgres_data/
 
+# Ignore module 5 batch processing data
+module_5_batch_processing/data/
+
 # Ignore all secrets directories
 secrets/
